@@ -1,0 +1,272 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,'Georgia', serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Memberikan ruang antara h1 dan nav */
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 3rem;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.gambar {
+    background-image: url('img/pexels-chiecharon-913215.jpg'); /* Mengganti backslash dengan slash */
+    background-size: cover; /* Membuat gambar menutupi seluruh area section */
+    background-position: center; /* Memusatkan gambar */
+    height: 100vh; /* Mengatur tinggi section menjadi setinggi viewport */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Menyusun elemen di dalam section secara vertikal */
+    justify-content: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    align-items: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    color: white; /* Agar teks berwarna putih untuk kontras dengan background */
+    padding: 1rem;
+}
+
+.gambar h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.gambar p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.gambar .register {
+    padding: 0.8rem 2rem;
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.gambar .register:hover {
+    background-color: #45a049; /* Warna ketika hover */
+}
+
+/* Styling untuk info-container */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Agar elemen dapat membungkus jika ruang tidak cukup */
+    gap: 1rem; /* Jarak antara section */
+    padding: 20px;
+}
+
+section#tentang, section#jadwal {
+    flex: 1; /* Agar kedua section memiliki lebar yang sama */
+    max-width: 48%; /* Maksimal lebar 48% untuk menghindari overflow */
+    box-sizing: border-box; /* Agar padding dan border dihitung dalam lebar elemen */
+    background-color: #ffffff; /* Menetapkan warna latar belakang putih untuk section */
+    padding: 20px;
+    border-radius: 8px; /* Memberikan sudut yang membulat */
+    text-align: center;
+}
+
+section#tentang p {
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+section#jadwal ul li {
+    margin-left: 11.5rem;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+/* Styling Warna */
+section {
+    background-color: #f9f9f9;
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+/* Styling Font */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p, ul {
+    font-size: 1rem;
+}
+
+/* Styling untuk galeri */
+section#galeri {
+    text-align: center; /* Menyelaraskan teks di tengah */
+    padding: 50px;
+    background-color: #2e2c2c; /* Memberikan latar belakang yang lembut */
+}
+
+section#galeri h2 {
+    color: rgb(241, 233, 233);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Membuat grid dengan kolom otomatis */
+    gap: 1rem; /* Jarak antara gambar-gambar */
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px; /* Mengatur tinggi tetap untuk gambar */
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa mengubah rasio aspek */
+    border-radius: 10px; /* Menambahkan sudut membulat yang lebih besar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan lembut */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi halus untuk efek hover */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Membesar gambar sedikit saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Menambah intensitas bayangan saat hover */
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #333; /* Warna latar belakang yang gelap untuk kontras */
+    color: #fff; /* Warna teks putih agar kontras dengan latar belakang */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    padding: 1.5rem 0; /* Memberikan padding vertikal pada footer */
+    border-top: 4px solid #4CAF50; /* Garis tepi atas footer dengan warna yang menarik */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem; /* Ukuran font yang pas */
+    font-family: 'Arial', sans-serif; /* Font yang bersih dan mudah dibaca */
+}
+
+
+/* Web Responsif */
+@media only screen and (max-width: 1024px) {
+    .info-container {
+        flex-direction: column; /* Mengatur agar info-container menjadi kolom pada layar lebih kecil */
+        align-items: center; /* Menyelaraskan item di tengah */
+    }
+
+    section#tentang, section#jadwal {
+        max-width: 90%; /* Mengurangi lebar maksimal untuk layar lebih kecil */
+    }
+
+    /* Grid Layout Galeri */
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Mengurangi ukuran kolom pada layar lebih kecil */
+    }
+
+    .gallery img {
+        height: 150px; /* Mengurangi tinggi gambar */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Menyusun header secara vertikal pada layar kecil */
+        align-items: center; /* Menyelaraskan item di tengah */
+    }
+
+    nav ul {
+        flex-direction: column; /* Mengatur menu navigasi menjadi kolom */
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Menambahkan jarak bawah pada setiap item navigasi */
+    }
+
+    section#tentang, section#jadwal {
+        max-width: 100%; /* Menggunakan lebar penuh untuk section pada layar kecil */
+        padding: 15px; /* Mengurangi padding pada layar kecil */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mengatur kolom galeri */
+        padding: 10px; /* Mengurangi padding */
+    }
+
+    .gallery img {
+        height: 200px; /* Menjaga tinggi gambar tetap pada layar lebih kecil */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Mengurangi ukuran font untuk judul utama */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Mengurangi ukuran font untuk sub-judul */
+    }
+
+    p, ul {
+        font-size: 0.9rem; /* Mengurangi ukuran font untuk teks */
+    }
+
+    .gambar h2 {
+        font-size: 2rem; /* Mengurangi ukuran font untuk teks dalam gambar */
+    }
+
+    .gambar p {
+        font-size: 1rem; /* Mengurangi ukuran font untuk deskripsi dalam gambar */
+    }
+
+    .gambar .register {
+        font-size: 1rem; /* Mengurangi ukuran font untuk tombol */
+        padding: 0.6rem 1.5rem; /* Mengurangi padding pada tombol */
+    }
+
+    .gallery {
+        padding: 5px; /* Mengurangi padding pada galeri */
+    }
+
+    .gallery img {
+        height: 150px; /* Mengurangi tinggi gambar pada layar kecil */
+    }
+}
